@@ -19,7 +19,7 @@ logger.add(stderr, format='<white>{time:HH:mm:ss}</white>'
 
 async def main() -> None:
     match user_action:
-        case 2:
+        case 1:
             tasks: list = [
                 asyncio.create_task(coro=task_completer(account_data=current_account,
                                                         proxy=next(proxies_cycled) if proxies_cycled else None))
